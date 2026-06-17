@@ -1,0 +1,294 @@
+/* ================================================
+RESPONSIVIDADE.CSS
+=============================================== */
+
+.menu-mobile{
+display:none;
+background:none;
+border:none;
+cursor:pointer;
+padding:0;
+color:#2D3B2E;
+}
+
+.menu-mobile i{
+font-size:24px;
+}
+
+.sidebar-overlay{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.35);
+z-index:9998;
+}
+
+.sidebar-overlay.active{
+display:block;
+}
+
+
+/* ================================================
+TABLET E MOBILE
+=============================================== */
+
+@media (max-width:768px){
+
+html,
+body{
+width:100%;
+height:100%;
+overflow-x:hidden;
+}
+
+.layout{
+display:block;
+width:100%;
+height:100vh;
+overflow:hidden;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+position:fixed;
+top:0;
+left:0;
+width:240px;
+min-width:240px;
+height:100vh;
+background:#F8F7F3;
+border-right:1px solid #E8E2D8;
+z-index:9999;
+overflow-y:auto;
+transform:translateX(-100%);
+transition:transform .3s ease;
+}
+
+.sidebar.open{
+transform:translateX(0);
+}
+
+/* MAIN */
+
+.main{
+width:100%;
+min-width:0;
+height:100vh;
+overflow:hidden;
+}
+
+/* MENU */
+
+.menu-mobile{
+display:flex !important;
+align-items:center;
+justify-content:center;
+flex-shrink:0;
+}
+
+/* TOPBAR */
+
+.topbar{
+width:100%;
+padding:14px 16px;
+}
+
+.topbar-left{
+display:flex;
+align-items:center;
+gap:12px;
+max-width:100%;
+}
+
+.topbar-left h2{
+font-size:18px;
+}
+
+.topbar-left p{
+display:none;
+}
+
+/* CONTEÚDO */
+
+.page-content{
+width:100%;
+max-width:100%;
+padding:16px;
+overflow-x:hidden;
+}
+
+
+/* ================================================
+DASHBOARD
+=============================================== */
+
+.kpi-grid{
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+.card-kpi{
+min-width:0;
+}
+
+.graficos-linha{
+grid-template-columns:1fr;
+}
+
+.info-linha{
+grid-template-columns:1fr;
+}
+
+
+/* ================================================
+CLIENTES
+=============================================== */
+
+.clientes-header{
+flex-direction:column;
+align-items:flex-start;
+gap:12px;
+}
+
+.btn-novo-cliente{
+width:100%;
+justify-content:center;
+}
+
+.clientes-filtros{
+flex-direction:column;
+gap:10px;
+}
+
+.clientes-busca{
+width:100%;
+}
+
+.btn-filtro{
+width:100%;
+justify-content:center;
+}
+
+.card-info{
+overflow-x:auto;
+}
+
+.clientes-tabela{
+min-width:650px;
+}
+
+.clientes-tabela th:nth-child(2),
+.clientes-tabela td:nth-child(2),
+.clientes-tabela th:nth-child(3),
+.clientes-tabela td:nth-child(3){
+display:none;
+}
+
+
+/* ================================================
+AGENDA
+=============================================== */
+
+.agenda-sidebar{
+display:none;
+}
+
+.agenda-topbar{
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
+}
+
+.agenda-topbar-dir{
+width:100%;
+justify-content:space-between;
+}
+
+.grade-dia-col:nth-child(7),
+.grade-dia-col:nth-child(8),
+.grade-col:nth-child(7),
+.grade-col:nth-child(8){
+display:none;
+}
+
+.grade-header,
+.grade-inner{
+grid-template-columns:40px repeat(5,1fr);
+}
+
+}
+
+
+/* ================================================
+CELULARES PEQUENOS
+=============================================== */
+
+@media (max-width:480px){
+
+.page-content{
+padding:12px;
+}
+
+.kpi-grid{
+grid-template-columns:1fr;
+}
+
+.clientes-titulo{
+font-size:22px;
+}
+
+.clientes-subtitulo{
+font-size:12px;
+}
+
+.card-kpi-value{
+font-size:20px;
+}
+
+.card-info,
+.card-grafico{
+padding:16px;
+}
+
+}
+
+/* ================================================
+PÁGINA CURRICULOS
+=============================================== */
+
+@media (max-width: 992px){
+
+    .curriculos-kpis{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .curriculos-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:16px;
+    }
+
+    .curriculos-kpis{
+        grid-template-columns:1fr;
+    }
+
+    .curriculo-kpi{
+        padding:20px;
+    }
+
+}
+
+@media(max-width:768px){
+
+.menu-mobile{
+  display:flex !important;
+  align-items:center;
+  justify-content:center;
+}
+
+}
